@@ -27,7 +27,6 @@ public class ACMEController {
 	
 	
 	@GetMapping("/getJobs")
-	@ResponseBody
 	public ResponseEntity<List<ACMEJobs>> getJobs(){
 		List<ACMEJobs> jobList = acmeService.getJobs();
 		return new ResponseEntity<List<ACMEJobs>>(jobList, HttpStatus.OK);
@@ -69,7 +68,6 @@ public class ACMEController {
 	}
 	
 	@GetMapping("/getJobItems")
-	@ResponseBody
 	public ResponseEntity<List<ACMEJobItems>> getJobItems(){
 			
 		List<ACMEJobItems> jobItemList = acmeService.getJobItems();
